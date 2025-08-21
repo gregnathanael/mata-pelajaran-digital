@@ -1,5 +1,135 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Lufga', sans-serif;
+  font-family: 'Lufga';
+}
+
+body {
+  display: flex;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  padding-top: 0px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+}
+
+.left {
+  left: 0;
+  background-color: #704FE6;
+}
+
+.right {
+  right: 0;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  color: #25252B;
+  font-style: normal;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 52px;
+}
+
+.description {
+  margin-top: 10px;
+  width: 477px;
+  height: 50px;
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: #25252B;
+  opacity: 0.6;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.center label {
+  width: 477px;
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: #25252B;
+  opacity: 0.6;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.input-semua {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  gap: 20px;
+}
+
+.input-email  {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-password  {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.form-container input {
+  width: 340px;
+  height: 25px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: none;
+  background: rgba(37, 37, 43, 0.05);;
+}
+
+.form-container ::placeholder {
+  opacity: 0.4;
+}
+
+.forgot-password {
+  width: 391px;
+  text-align: right;
+  font-family: 'Lufga';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  color: #704FE6;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  cursor: pointer;
+}
+
+.forget-password:hover {
+  color: #6146c4;
+  cursor: pointer;
+  text-decoration: underline;
 }
