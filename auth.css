@@ -9,20 +9,19 @@ body {
 }
 
 .split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  padding-top: 0px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 550px;
+  min-width: 550px;
+  gap: 64px;
 }
 
 .left {
@@ -40,13 +39,11 @@ body {
 }
 
 .header-logo {
-  margin-top: 7px;
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
-  gap: 10px;
-  margin-bottom: 50px;
+  gap: 16px;
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -54,20 +51,23 @@ body {
   color: #25252B;
 }
 
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .header {
   display: flex;
   color: #25252B;
   font-style: normal;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 500;
   line-height: 52px;
-
 }
 
 .description {
-  margin-top: 10px;
   width: fit-content;
-  margin-bottom: 37px;
   font-family: 'Lufga';
   font-style: normal;
   font-weight: 500;
@@ -81,12 +81,18 @@ body {
   flex-grow: 0;
 }
 
+.header-forgot {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .center label {
   width: 477px;
   font-family: 'Lufga';
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 21px;
   letter-spacing: -0.02em;
   color: #25252B;
@@ -96,43 +102,25 @@ body {
   flex-grow: 0;
 }
 
-.input-semua {
+.header-input {
   display: flex;
   flex-direction: column;
-  width: 100px;
-  gap: 20px;
-}
-
-.input-email {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.input-password {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.form-container {
-  box-sizing: border-box;
+  gap: 48px;
 }
 
 .form-container input {
-  width: 340px;
   border: 2px solid #e1e5e9;
   outline: none;
   height: 20px;
-  padding: 10px 25px;
   border-radius: 50px;
+  padding: 19.5px 24px;
   background: rgba(37, 37, 43, 0.05);
-  ;
   transition: all 0.2s;
 }
 
 .form-container ::placeholder {
   opacity: 40%;
+  font-size: 16px;
 }
 
 .form-container input:focus {
@@ -140,10 +128,28 @@ body {
   outline: none;
 }
 
-.tambahan {
+.input-semua {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  min-width: 550px;
+  gap: 24px;
+}
+
+.input-email {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-password {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-container {
+  box-sizing: border-box;
+  min-width: 550px;
 }
 
 .forgot-password {
@@ -155,8 +161,6 @@ body {
   text-align: right;
   letter-spacing: -0.02em;
   color: #704FE6;
-  margin-top: 25px;
-  margin-bottom: 25px;
   cursor: pointer;
   text-decoration: none;
 }
@@ -165,7 +169,7 @@ body {
   color: #6146c4;
 }
 
-.tambahan button {
+.sign-in {
   box-sizing: border-box;
   color: #fff;
   display: flex;
@@ -174,19 +178,47 @@ body {
   background: #704FE6;
   border: 2px solid #704FE6;
   border-radius: 26px;
-  width: 391px;
-  height: 40px;
+  min-width: 550px;
+  height: 52px;
   padding: 16px;
   transition: all 0.3s;
-  margin-bottom: 24px;
 }
 
-.tambahan button:hover {
+.sign-in:hover {
   background: #6146c4;
   cursor: pointer;
 }
 
-.sign-up p {
+.sign-in p {
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: rgba(37, 37, 43, 0.6);
+}
+
+.sign-in a {
+  color: #704FE6;
+  text-decoration: none;
+}
+
+.sign-in a:hover {
+  color: #6146c4;
+  ;
+}
+
+.sign-in-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sign-up {
+  width: 550px;
+  height: 18px;
   font-family: 'Lufga';
   font-style: normal;
   font-weight: 500;
@@ -198,10 +230,63 @@ body {
 }
 
 .sign-up a {
-  color: #704FE6;
   text-decoration: none;
+  color: #704FE6;
 }
 
-.sign-up a:hover {
-  color: #6146c4;;
+.header-left {
+  width: 679px;
+  height: 168px;
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 84px;
+  letter-spacing: -0.04em;
+  color: #FFFFFF;
+}
+
+.header-left img {
+  position: absolute;
+}
+
+.image-1 {
+  position: absolute;
+  width: 297px;
+  height: 297px;
+  left: -83px;
+  top: -101px;
+}
+
+.image-2 {
+  width: 145px;
+  height: 27px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  top: 430px;
+}
+
+.image-3 {
+  position: absolute;
+  width: 300px;
+  height: 296.75px;
+  left: 480px;
+  top: 288px;
+
+}
+
+.image-4 {
+  width: 137px;
+  height: 137px;
+  left: 687px;
+  top: 698px;
+}
+
+.image-5 {
+  position: absolute;
+  width: 358px;
+  height: 152px;
+  left: 601px;
+  top: 980px;
 }
