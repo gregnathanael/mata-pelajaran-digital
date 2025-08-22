@@ -96,9 +96,8 @@ body {
 }
 
 .form-container {
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
+  width: 391px;
 }
 
 .form-container input {
@@ -114,9 +113,11 @@ body {
   opacity: 0.4;
 }
 
+.form-container input:focus {
+border: none;
+}
+
 .forgot-password {
-  width: 391px;
-  text-align: right;
   font-family: 'Lufga';
   font-weight: 500;
   font-size: 16px;
@@ -130,6 +131,6 @@ body {
 
 .forget-password:hover {
   color: #6146c4;
-  cursor: pointer;
   text-decoration: underline;
 }
+
