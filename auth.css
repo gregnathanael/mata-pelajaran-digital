@@ -20,7 +20,7 @@ body {
 .center {
   position: absolute;
   top: 50%;
-  left: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
 }
@@ -35,6 +35,25 @@ body {
   background-color: #fff;
 }
 
+.header-logo img {
+  width: 40px;
+}
+
+.header-logo {
+  margin-top: 7px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: #25252B;
+}
+
 .header {
   display: flex;
   color: #25252B;
@@ -42,12 +61,13 @@ body {
   font-size: 32px;
   font-weight: 500;
   line-height: 52px;
+
 }
 
 .description {
   margin-top: 10px;
-  width: 477px;
-  height: 50px;
+  width: fit-content;
+  margin-bottom: 37px;
   font-family: 'Lufga';
   font-style: normal;
   font-weight: 500;
@@ -83,54 +103,105 @@ body {
   gap: 20px;
 }
 
-.input-email  {
+.input-email {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 7px;
 }
 
-.input-password  {
+.input-password {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 7px;
 }
 
 .form-container {
   box-sizing: border-box;
-  width: 391px;
 }
 
 .form-container input {
   width: 340px;
-  height: 25px;
+  border: 2px solid #e1e5e9;
+  outline: none;
+  height: 20px;
   padding: 10px 25px;
   border-radius: 50px;
-  border: none;
-  background: rgba(37, 37, 43, 0.05);;
+  background: rgba(37, 37, 43, 0.05);
+  ;
+  transition: all 0.2s;
 }
 
 .form-container ::placeholder {
-  opacity: 0.4;
+  opacity: 40%;
 }
 
 .form-container input:focus {
-border: none;
+  border: 2px solid #704FE6;
+  outline: none;
+}
+
+.tambahan {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .forgot-password {
+  display: inline;
   font-family: 'Lufga';
   font-weight: 500;
   font-size: 16px;
   line-height: 21px;
+  text-align: right;
   letter-spacing: -0.02em;
   color: #704FE6;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: #6146c4;
+}
+
+.tambahan button {
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #704FE6;
+  border: 2px solid #704FE6;
+  border-radius: 26px;
+  width: 391px;
+  height: 40px;
+  padding: 16px;
+  transition: all 0.3s;
+  margin-bottom: 24px;
+}
+
+.tambahan button:hover {
+  background: #6146c4;
   cursor: pointer;
 }
 
-.forget-password:hover {
-  color: #6146c4;
-  text-decoration: underline;
+.sign-up p {
+  font-family: 'Lufga';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: rgba(37, 37, 43, 0.6);
 }
 
+.sign-up a {
+  color: #704FE6;
+  text-decoration: none;
+}
+
+.sign-up a:hover {
+  color: #6146c4;;
+}
