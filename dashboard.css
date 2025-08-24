@@ -4,6 +4,19 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    transition: FadeIn 3s;
+}
+
+@keyframes FadeIn{
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
 
 /* ⇩⇩ Ini font dari figmanya yah ⇩⇩ */
@@ -31,6 +44,39 @@
 /* ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ */
 
 
+/*kode apa nih guys!!!!!!!!*/
+@media only screen and (max-width: 1920px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+@media only screen and (max-width: 1028px) {
+  body {
+    background-color: lightseagreen;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-color: lightgoldenrodyellow;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    background-color: lightslategray;
+  }
+}
+
+
+
 body {
     display: flex;
     background-color: #fafafa;
@@ -52,6 +98,7 @@ body {
     background-color: #f0f0f0;
     color: rgb(84, 84, 84);
     padding: 20px;
+    height: auto;
 }
 
 .sidebar ul li{
@@ -109,21 +156,15 @@ header input {
     height: 53px;
     border-radius: 50px;
     font-size: 16px;
-    display: flex;
     background-image: url('assets/search-icon.png');
     transition: ease-in-out 0.3s;
+    background-color: #25252B 5%;
 }
 
 header input::placeholder {
     color: #999;
-    padding-left: 10px;
-    font-size: 16px;
-    
 }
 
-header input:hover {
-    border: #FFD25D 1px solid;
-}
 
 .banners {
     margin: 20px 0;
@@ -157,6 +198,8 @@ header input:hover {
     margin-top: 5%;
     font-size: 30px;
     font-weight: bold;
+    font-family: 'LufgaSemiBold', Arial, sans-serif;
+
 }
 
 .banner-main {
@@ -182,6 +225,7 @@ header input:hover {
     position: relative;
     font-size: 30px;
     font-weight: bold;
+    font-family: 'LufgaSemiBold', Arial, sans-serif;
 }
 
 .banner-overlay {
@@ -196,6 +240,7 @@ header input:hover {
 .text1 h2{
     font-weight: bold;
     font-size: 40px;
+    font-family: 'LufgaSemiBold', Arial, sans-serif;
 
 }
 
@@ -249,7 +294,27 @@ header input:hover {
     height: 238px;
     display: table-cell;
     padding: 15px;
+    font-family: 'LufgaMedium';
+    transition: ease-in-out 0.3s;
     
+}
+
+.bootcamp-card .bootcamp-browse {
+    font-family: 'LufgaMedium';
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.bootcamp-card:hover {
+    background-color: #DEC8FE ;
+    color: #6146c4;
+}
+
+.bootcamp-card .bootcamp-browse img{
+    align-items: center;
+    height: 40px;
+    width: 40px;
 }
 
 h3 {
