@@ -7,38 +7,80 @@
     <title>Koursian Dashboard</title>
 </head>
 <body>
+
+    <!--Ini bagian sidebarnya-->
     <div class="sidebar">
+        <div class="brand">
         <img src="assets\logo.svg" alt="Koursian Logo" class="logo">
         <h3>Koursian</h3>
+        </div>
         <ul>
-            <li>Dashboard</li>
-            <li>Browse</li>
-            <li>My Bootcamp</li>
-            <li>Mentor</li>
-            <li>Question</li>
+            <li>
+                <img src="assets\Vector.png" class="icon">
+                Dashboard
+            </li>
+            <li>
+                <img src="assets\solar_compass-bold-duotone.png" class="icon">
+                Browse
+            </li>
+            <li>
+                <img src="assets\solar_notebook-minimalistic-bold-duotone.png" class="icon">
+                My Bootcamp
+            </li>
+            <li>
+                <img src="assets\solar_question-circle-bold-duotone.png" class="icon">
+                Mentor
+            </li>
+            <li>
+                <img src="assets\solar_user-speak-bold-duotone.png " class="icon">
+                Question
+            </li>
         </ul>
     </div>
+
+                <!--Ini bagian navbarnya-->
     <div class="main-content">
         <header>
-            <h2>Dashboard</h2>
-            <div class="tengah">
+        <h2>Dashboard</h2>
+        <div class="tengah">
             <input type="text" placeholder="Search bootcamp, mentor, question" class="search-bar">
-            </div>
+                <div class="search-icons">
+                    <img src="assets\solar_chat-line-bold-duotone.png">
+                    <img src="assets\solar_bookmark-bold-duotone.png">
+                    <img src="assets\solar_bell-bold-duotone.png">
+                    <img src="assets\solar_cart-large-2-bold-duotone.png">
+                </div>
+        </div>
         </header>
         
+        <!--Ini bagian banner promosi-->
         <div class="banners">
             <table>
-            <div class="banner banner-main">
+            <div class="banner-main">
+                <div class="text1">
                 <p>30% Off Secure Your Seat</p>
                 <h2>Data Science Bootcamp</h2>
+                </div>
+                <img src="assets\Mask group.png" class="banner-overlay">
             </div>
-            <div class="banner banner-promo">
+            <div class="banner-promo">
+                <div class="text1">
                 <p>Just 7 Days 70% OFF NOW!</p>
                 <h2>Master Laravel</h2>
+                </div>
+                <img src="assets\Mask group2.png" class="banner-overlay">
             </div>
             </table>
         </div>
 
+
+        <!-- ~Sedikit klarifikasi mengenai yang dibawah karena nama kelasnya yang ribet dan menyusahkan, 
+        itu terjadi karena banyaknya masalah dalam css dalam pengklasifikasikannya, dan banyaknya eror yang terjadi,
+        maka supaya tidak bermasalah lagi, aku selaku pertanggungjawaban dari dashboard.html membuat class dengan nama yang aneh 
+        dan ditambahkan angka segala macam supaya mencegah eror (づ> v <)づ♡~ -->
+
+
+        <!--Ini bagian apa ya wktu itu?..., oh ya yang tombol" di tengah tu, untuk milih pelajaran yah?...-->
         <div class="categories">
             <button class="a01">
                 <div class="logo1">
@@ -90,6 +132,7 @@
             </button>
         </div>
 
+        <!--Ini bagian contentnya-->
         <section class="bootcamps">
             <h3>Popular Bootcamp</h3>
             <div class="bootcamp-card">Advanced Concepts and Best Practices</div>

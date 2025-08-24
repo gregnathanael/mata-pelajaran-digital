@@ -1,3 +1,4 @@
+/* Universal Anjay */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,15 +6,39 @@
     font-family: Arial, sans-serif;
 }
 
+/* ⇩⇩ Ini font dari figmanya yah ⇩⇩ */
+@font-face {
+    font-family: 'LufgSemiBold';
+    src: url('assets/FONT/LufgaSemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LufgaMedium';
+    src: url('assets/FONT/LufgaMedium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LufgaBold';
+    src: url('assets/FONT/LufgaBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧⇧ */
+
+
 body {
     display: flex;
-    background-color: #f4f4f4;
+    background-color: #fafafa;
 }
 
 .search-bar input{
     align-items: center;
     justify-content: center;
-
 }
 
 .tengah {
@@ -22,12 +47,24 @@ body {
     margin-top: 20px;
 }
 
-
 .sidebar {
-    width: 200px;
+    width: 300px;
     background-color: #f0f0f0;
     color: rgb(84, 84, 84);
     padding: 20px;
+}
+
+.sidebar ul li{
+    padding: 10px;
+    transition: ease 0.3s;
+    font-family: 'LufgaMedium';
+}
+
+.sidebar ul li:hover {
+    cursor: pointer;
+    color: #6146c4;
+    background-color: #DEC8FE;
+    border-radius: 50px;
 }
 
 .sidebar h3 {
@@ -41,6 +78,11 @@ body {
 
 .sidebar li {
     margin: 10px 0;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .main-content {
@@ -56,46 +98,105 @@ header {
 
 header h2 {
     color: #333;
+    font-size: 32px;
+    font-family: 'LufgaSemiBold', Arial, sans-serif;
 }
 
 header input {
-    padding: 6px;
-    border: 1px solid #ccc;
+    padding-left: 15px;
+    border: 0px;
+    width: 530px;
+    height: 53px;
+    border-radius: 50px;
+    font-size: 16px;
+    display: flex;
+    background-image: url('assets/search-icon.png');
+    transition: ease-in-out 0.3s;
+}
+
+header input::placeholder {
+    color: #999;
+    padding-left: 10px;
+    font-size: 16px;
+    
+}
+
+header input:hover {
+    border: #FFD25D 1px solid;
 }
 
 .banners {
     margin: 20px 0;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    
 }
 
 .banner-promo {
-    width: 600px;
-    height: 110px;
+    width: 775px;
+    height: 200px;
     background-color: #704FE6;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    flex: 1 ;
+
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;      
+    text-align: center; 
 }
 
 .banner-promo p{
     text-align: center;
     margin-top: 5%;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .banner-main {
-    width: 600px;
-    height: 110px;
+    width: 775px;
+    height: 200px;
     background-color: #FFD25D;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    flex: 1 ;
+
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;       
       
 }
 
 .banner-main p {
     text-align: center;
     margin-top: 5%;
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
 }
 
-.banner {
-    color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    text-align: center;
+.banner-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.text1 h2{
+    font-weight: bold;
+    font-size: 40px;
+
 }
 
 .categories {
@@ -110,7 +211,8 @@ header input {
     padding: 15px;
     margin: 0 5px;
     background-color: #007bff;
-    color: white;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
     border: none;
     border-radius: 100px;
     cursor: pointer;
@@ -124,7 +226,7 @@ header input {
     background-color: #DEC8FE;
 }
 
-.categories .a03 {
+.categories .a03, .categories .a06 {
     background-color: #FFD25D;
 }
 
@@ -135,6 +237,7 @@ header input {
 
 .bootcamps, .recommended {
     margin-bottom: 20px;
+    border-spacing: 10px;
 }
 
 .bootcamp-card {
@@ -143,9 +246,10 @@ header input {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     width: 245px;
-    height: 150px;
+    height: 238px;
     display: table-cell;
     padding: 15px;
+    
 }
 
 h3 {
@@ -173,6 +277,8 @@ h3 {
     align-content: center;
     justify-content: center;
     justify-items: center;
+    font-family: 'LufgaMedium';
+    font-weight: lighter;
 
 }
 
@@ -183,3 +289,33 @@ h3 {
     height: 30px;
     gap: 10px;
 }
+.icon img{
+    width: 26.67px;
+    height:  26.67px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.brand h3{
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+     font-family: 'LufgaMedium';
+}
+
+
+.search-icons img{
+    gap: 20px;
+    width: auto;
+    height: auto;
+    padding: 10px;
+}
+
+
